@@ -1,0 +1,87 @@
+@import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Onfly palette — platform background #F3F3F3, info-950 #252527 */
+    --background: 0 0% 95%;
+    --foreground: 240 3% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 3% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 3% 15%;
+
+    /* Onfly $primary #009EFB */
+    --primary: 202 100% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Onfly $info-100 #E6E6E7 — neutral surface */
+    --secondary: 240 2% 90%;
+    --secondary-foreground: 240 3% 15%;
+
+    --muted: 240 2% 90%;
+    /* Onfly $info-500 #696A71 */
+    --muted-foreground: 233 4% 43%;
+
+    /* Onfly $primary-50 #EFF8FF + $primary-700 #0062AB */
+    --accent: 206 100% 97%;
+    --accent-foreground: 206 100% 34%;
+
+    /* Onfly $danger #F34F4F */
+    --destructive: 0 87% 63%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Onfly $info-200 #CFD0D2 */
+    --border: 220 3% 82%;
+    --input: 220 3% 82%;
+    --ring: 202 100% 49%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 3% 26%;
+    --sidebar-primary: 202 100% 49%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 206 100% 97%;
+    --sidebar-accent-foreground: 240 3% 15%;
+    --sidebar-border: 220 3% 82%;
+    --sidebar-ring: 202 100% 49%;
+
+    /* Custom tokens — Onfly brand */
+    /* $success #00C785 */
+    --success: 160 100% 39%;
+    --success-foreground: 0 0% 100%;
+    /* $warning #ED7713 */
+    --warning: 28 86% 50%;
+    --warning-foreground: 0 0% 100%;
+    /* $danger #F34F4F */
+    --danger: 0 87% 63%;
+    --danger-foreground: 0 0% 100%;
+    /* Highlight callouts — $primary-50 bg, $primary-700 fg */
+    --info-bg: 206 100% 97%;
+    --info-fg: 206 100% 34%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .leaflet-container {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}
